@@ -152,7 +152,7 @@
                     <span class="header-span">{{ t('datasource.the_original_one') }}</span>
                   </div>
                   <div class="confirm-content">
-                    <span>SQLBot@123456</span>
+                    <span>SmartBI@123456</span>
                     <el-button style="margin-left: 4px" text @click="copyText">{{
                       t('datasource.copy')
                     }}</el-button>
@@ -506,7 +506,7 @@ const setPopoverRef = (el: any, row: any) => {
 }
 
 const copyText = () => {
-  copy('SQLBot@123456')
+  copy('SmartBI@123456')
     .then(function () {
       ElMessage.success(t('embedded.copy_successful'))
     })

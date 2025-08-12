@@ -330,8 +330,8 @@ export const useAppearanceStore = defineStore('appearanceStore', {
         document.title = this.name
         setTitle(this.name)
       } else {
-        document.title = 'SQLBot'
-        setTitle('SQLBot')
+        document.title = 'SmartBI'
+        setTitle('SmartBI')
       }
       setLinkIcon(this.web)
     },

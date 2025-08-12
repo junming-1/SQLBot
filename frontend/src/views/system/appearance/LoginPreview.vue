@@ -9,9 +9,9 @@
           </el-icon>
         </div>
         <div class="tab-card active">
-          <div :title="pageName || 'SQLBot'" class="active-span">
+          <div :title="pageName || 'SmartBI'" class="active-span">
             <img :src="pageWeb" alt="" />
-            <span>{{ pageName || 'SQLBot' }}</span>
+            <span>{{ pageName || 'SmartBI' }}</span>
           </div>
           <el-icon size="10">
             <icon_close_outlined />
