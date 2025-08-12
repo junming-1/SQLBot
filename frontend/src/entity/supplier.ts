@@ -280,6 +280,19 @@ export const supplierList: Array<{
       },
     },
   },
+  {
+    id: 12,
+    name: 'Ollama',
+    icon: icon_openai_colorful,
+    is_private: true,
+    model_config: {
+      0: {
+        api_domain: 'http://127.0.0.1:11434/v1',
+        common_args: [{ key: 'temperature', val: 0.6, type: 'number', range: '[0, 1]' }],
+        model_options: [],
+      },
+    },
+  },
 ]
 
 export const base_model_options = (supplier_id: number, model_type?: number) => {

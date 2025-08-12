@@ -53,7 +53,7 @@ class Settings(BaseSettings):
     #SQLBOT_DB_URL: str = 'mysql+pymysql://root:Password123%40mysql@127.0.0.1:3306/sqlbot'
     
     TOKEN_KEY: str =  "X-SQLBOT-TOKEN"
-    DEFAULT_PWD: str = "SQLBot@123456"
+    DEFAULT_PWD: str = "SmartBI@123456"
     ASSISTANT_TOKEN_KEY: str = "X-SQLBOT-ASSISTANT-TOKEN"
     
     CACHE_TYPE: Literal["redis", "memory", "None"] = "memory"

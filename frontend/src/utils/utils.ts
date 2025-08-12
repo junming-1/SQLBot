@@ -101,5 +101,5 @@ export const isBtnShow = (val: string) => {
 }
 
 export const setTitle = (title?: string) => {
-  document.title = title || 'SQLBot'
+  document.title = title || 'SmartBI'
 }
