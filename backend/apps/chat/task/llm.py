@@ -231,7 +231,7 @@ class LLMService:
         res = self.llm.stream(analysis_msg)
         token_usage = {}
         for chunk in res:
-            SQLBotLogUtil.info(chunk)
+            SQLBotLogUtil.debug(chunk)
             reasoning_content_chunk = ''
             if 'reasoning_content' in chunk.additional_kwargs:
                 reasoning_content_chunk = chunk.additional_kwargs.get('reasoning_content', '')
@@ -275,7 +275,7 @@ class LLMService:
         res = self.llm.stream(predict_msg)
         token_usage = {}
         for chunk in res:
-            SQLBotLogUtil.info(chunk)
+            SQLBotLogUtil.debug(chunk)
             reasoning_content_chunk = ''
             if 'reasoning_content' in chunk.additional_kwargs:
                 reasoning_content_chunk = chunk.additional_kwargs.get('reasoning_content', '')
@@ -326,7 +326,7 @@ class LLMService:
         token_usage = {}
         res = self.llm.stream(guess_msg)
         for chunk in res:
-            SQLBotLogUtil.info(chunk)
+            SQLBotLogUtil.debug(chunk)
             reasoning_content_chunk = ''
             if 'reasoning_content' in chunk.additional_kwargs:
                 reasoning_content_chunk = chunk.additional_kwargs.get('reasoning_content', '')
@@ -399,7 +399,7 @@ class LLMService:
             token_usage = {}
             res = self.llm.stream(datasource_msg)
             for chunk in res:
-                SQLBotLogUtil.info(chunk)
+                SQLBotLogUtil.debug(chunk)
                 reasoning_content_chunk = ''
                 if 'reasoning_content' in chunk.additional_kwargs:
                     reasoning_content_chunk = chunk.additional_kwargs.get('reasoning_content', '')
@@ -487,7 +487,7 @@ class LLMService:
         token_usage = {}
         res = self.llm.stream(self.sql_message)
         for chunk in res:
-            SQLBotLogUtil.info(chunk)
+            SQLBotLogUtil.debug(chunk)
             reasoning_content_chunk = ''
             if 'reasoning_content' in chunk.additional_kwargs:
                 reasoning_content_chunk = chunk.additional_kwargs.get('reasoning_content', '')
@@ -522,7 +522,7 @@ class LLMService:
         res = self.llm.stream(msg)
         token_usage = {}
         for chunk in res:
-            SQLBotLogUtil.info(chunk)
+            SQLBotLogUtil.debug(chunk)
             reasoning_content_chunk = ''
             if 'reasoning_content' in chunk.additional_kwargs:
                 reasoning_content_chunk = chunk.additional_kwargs.get('reasoning_content', '')
@@ -568,7 +568,7 @@ class LLMService:
         res = self.llm.stream(msg)
         token_usage = {}
         for chunk in res:
-            SQLBotLogUtil.info(chunk)
+            SQLBotLogUtil.debug(chunk)
             reasoning_content_chunk = ''
             if 'reasoning_content' in chunk.additional_kwargs:
                 reasoning_content_chunk = chunk.additional_kwargs.get('reasoning_content', '')
@@ -624,7 +624,7 @@ class LLMService:
         token_usage = {}
         res = self.llm.stream(self.chart_message)
         for chunk in res:
-            SQLBotLogUtil.info(chunk)
+            SQLBotLogUtil.debug(chunk)
             reasoning_content_chunk = ''
             if 'reasoning_content' in chunk.additional_kwargs:
                 reasoning_content_chunk = chunk.additional_kwargs.get('reasoning_content', '')
