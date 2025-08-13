@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import aboutBg from '@/assets/embedded/LOGO-about.png'
+import aboutBg from '@/assets/embedded/smartbi-logo.svg'
 
 import { ref, reactive, onMounted } from 'vue'
 import type { F2CLicense } from './index.ts'

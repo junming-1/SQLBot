@@ -5,7 +5,7 @@
     </div>
     <div class="login-content">
       <div class="login-right">
-        <img width="227" height="52" :src="aboutBg" alt="" />
+        <img width="300" height="72" :src="smartbiLogo" alt="SmartBI" />
         <div class="welcome">{{ $t('common.intelligent_questioning_platform') }}</div>
         <div class="login-form">
           <h2 class="title">{{ $t('common.login') }}</h2>
@@ -51,7 +51,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useUserStore } from '@/stores/user'
 import { useI18n } from 'vue-i18n'
-import aboutBg from '@/assets/embedded/LOGO-about.png'
+import smartbiLogo from '@/assets/embedded/smartbi-logo.svg'
 import login_image from '@/assets/embedded/login_image.png'
 
 const router = useRouter()
@@ -85,7 +85,7 @@ const submitForm = () => {
 .login-container {
   height: 100vh;
   width: 100vw;
-  background-color: #fff;
+  background-color: var(--bg-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,16 +114,17 @@ const submitForm = () => {
         font-weight: 400;
         font-size: 14px;
         line-height: 20px;
-        color: #646a73;
+        color: var(--text-light);
       }
 
       .login-form {
-        border: 1px solid #dee0e3;
+        border: 1px solid var(--border-color);
         padding: 40px;
         width: 480px;
         min-height: 392px;
         border-radius: 12px;
         box-shadow: 0px 6px 24px 0px #1f232914;
+        background: var(--panel-bg);
 
         .form-content_error {
           .ed-form-item--default {

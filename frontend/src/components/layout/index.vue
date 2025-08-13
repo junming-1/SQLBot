@@ -315,7 +315,7 @@ onMounted(() => {
 
   .main-menu-sidebar {
     width: 240px;
-    background: #fff;
+    background: var(--panel-bg);
     box-shadow: 0 1px 3px var(--ed-menu-border-color);
     display: flex;
     flex-direction: column;
@@ -323,6 +323,23 @@ onMounted(() => {
 
     .ed-menu--vertical {
       padding: 0 16px;
+    }
+  }
+
+  .top-bar-title {
+    font-size: 14px;
+    color: var(--el-color-info);
+    display: flex;
+    align-items: center;
+    left: 132px;
+    width: 200px;
+    position: fixed;
+
+    .split {
+      color: #bbbbbb;
+      border: 0.5px solid;
+      margin-right: 16px;
+      height: 12px;
     }
   }
 
@@ -397,52 +414,14 @@ onMounted(() => {
 
       .workspace-select {
         width: 100% !important;
-
-        :deep(.ed-select__wrapper) {
-          border-radius: 8px;
-          box-shadow: none !important;
-          background-color: #f1f3f4;
-          line-height: 24px;
-          min-height: 32px;
-
-          .workspace-label {
-            color: #2d2e31;
-            font-weight: 600;
-            display: flex;
-            column-gap: 8px;
-            align-items: center;
-            height: 32px;
-          }
-        }
-      }
-    }
-
-    .top-bar-title {
-      font-size: 14px;
-      color: var(--el-color-info);
-      display: flex;
-      align-items: center;
-      left: 132px;
-      width: 200px;
-      position: fixed;
-
-      .split {
-        color: #bbbbbb;
-        border: 0.5px solid;
-        margin-right: 16px;
-        height: 12px;
       }
     }
   }
 
   .main-content {
-    width: calc(100% - 288px);
-    height: 100vh;
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    background-color: #f5f7fa;
-    box-sizing: border-box;
+    overflow: auto;
+    background: var(--bg-color);
 
     &:not(.main-content-with-bar) {
       padding: 16px 24px;
@@ -523,7 +502,7 @@ onMounted(() => {
     }
 
     .sys-page-content {
-      background-color: var(--white);
+      background-color: var(--panel-bg);
       border-radius: var(--border-radius);
       padding: 24px;
       box-shadow: var(--shadow);
@@ -531,7 +510,7 @@ onMounted(() => {
       flex: 1;
 
       .sys-inner-container {
-        background: #fff;
+        background: var(--panel-bg);
         border-radius: 8px;
         padding: 20px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -553,12 +532,11 @@ onMounted(() => {
 
     .sub-menu-container {
       flex: 0 0 auto;
-      background-color: lightblue;
       resize: horizontal;
       overflow: auto;
       border-right: 1px solid var(--el-menu-border-color);
       border-radius: 0;
-      background-color: var(--white);
+      background-color: var(--panel-bg);
 
       :deep(.ed-menu) {
         border: none;

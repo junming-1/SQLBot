@@ -1,6 +1,6 @@
 import CryptoJS from 'crypto-js'
 
-const key = CryptoJS.enc.Utf8.parse('SQLBot1234567890')
+const key = CryptoJS.enc.Utf8.parse('SmartBI1234567890')
 
 export const encrypted = (str: string) => {
   return CryptoJS.AES.encrypt(str, key, {

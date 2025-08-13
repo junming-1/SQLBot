@@ -27,21 +27,21 @@ if [[ ! ${SQLBOT_EXTERNAL_DB} ]] || [ "${SQLBOT_EXTERNAL_DB}" = "false" ]; then
 fi
 
 function usage() {
-   echo "SQLBot 控制脚本"
+   echo "SmartBI 控制脚本"
    echo
    echo "Usage: "
    echo "  ./sctl [COMMAND] [ARGS...]"
    echo "  ./sctl --help"
    echo
    echo "Commands: "
-   echo "  status                查看 SQLBot 服务运行状态"
-   echo "  start                 启动 SQLBot 服务"
-   echo "  stop                  停止 SQLBot 服务"
-   echo "  restart               重启 SQLBot 服务"
-   echo "  reload                重载 SQLBot 服务"
-   echo "  clear-images          清理 SQLBot 旧版本的相关镜像"
-   echo "  clear-logs            清理 SQLBot 历史日志"
-   echo "  version               查看 SQLBot 版本"
+   echo "  status                查看 SmartBI 服务运行状态"
+   echo "  start                 启动 SmartBI 服务"
+   echo "  stop                  停止 SmartBI 服务"
+   echo "  restart               重启 SmartBI 服务"
+   echo "  reload                重载 SmartBI 服务"
+   echo "  clear-images          清理 SmartBI 旧版本的相关镜像"
+   echo "  clear-logs            清理 SmartBI 历史日志"
+   echo "  version               查看 SmartBI 版本"
 }
 
 function _healthcheck() {
@@ -58,14 +58,14 @@ function _healthcheck() {
       sleep 1
       read status healthy<<<$(docker inspect $container_name --format '{{.State.Status}} {{.State.Health.Status}}')
       if [[ "$healthy" == "starting" ]];then
-         printf "\rSQLBot 服务状态 : 正在启动 ... %3ds" $b
+         printf "\rSmartBI 服务状态 : 正在启动 ... %3ds" $b
       elif [[ "$status" == "running" ]] && [[ "$healthy" == "healthy" ]];then
-         printf "\rSQLBot 服务状态 : 正常运行          "
+         printf "\rSmartBI 服务状态 : 正常运行          "
          echo
          return;
       else
          echo
-         echo -e "SQLBot 服务状态 : \033[31m无法访问\033[0m"
+         echo -e "SmartBI 服务状态 : \033[31m无法访问\033[0m"
          exit 1
       fi
    done
@@ -84,7 +84,7 @@ function _get_current_version() {
 
 function status() {
    echo
-   echo "SQLBot 容器运行状态"
+   echo "SmartBI 容器运行状态"
    cd ${SQLBOT_RUNNING_BASE}
    ${compose_cmd} ${compose_files} ps
 
@@ -101,10 +101,10 @@ function status() {
    du -Sh ${SQLBOT_RUNNING_BASE}/logs/
 
    echo
-   echo "SQLBot 运行目录及文件大小 : "
+   echo "SmartBI 运行目录及文件大小 : "
    du -sh ${SQLBOT_BASE}
    echo
-   echo "SQLBot 运行目录使用情况 : "
+   echo "SmartBI 运行目录使用情况 : "
    df -H ${SQLBOT_BASE}
 
    _healthcheck
@@ -159,7 +159,7 @@ function clear_images() {
    fi
 }
 function clear_logs() {
-   echo "开始清理 SQLBot 历史日志"
+   echo "开始清理 SmartBI 历史日志"
    rm -rf ${SQLBOT_LOG_PATH}/*.*.*
    echo "" > ${SQLBOT_LOG_PATH}/info.log
    echo "" > ${SQLBOT_LOG_PATH}/debug.log

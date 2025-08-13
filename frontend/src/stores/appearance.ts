@@ -254,7 +254,7 @@ export const useAppearanceStore = defineStore('appearanceStore', {
       const resData = res.data
       // if (!resData?.length) {
       //   if (!isDataEaseBi) {
-      //     document.title = 'SQLBot'
+      //     document.title = 'SmartBI'
       //     setLinkIcon()
       //   }
       //   return

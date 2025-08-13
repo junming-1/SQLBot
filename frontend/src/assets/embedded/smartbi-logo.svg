@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120" width="600" height="120" role="img" aria-label="SmartBI">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#20c997"/>
+      <stop offset="100%" stop-color="#2f80ed"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="600" height="120" rx="16" fill="none"/>
+  <g transform="translate(20,20)">
+    <circle cx="40" cy="40" r="36" fill="url(#grad)"/>
+    <circle cx="28" cy="40" r="8" fill="#fff"/>
+    <circle cx="52" cy="40" r="8" fill="#fff"/>
+    <rect x="32" y="58" width="16" height="4" rx="2" fill="#fff"/>
+  </g>
+  <text x="110" y="75" font-family="Inter, system-ui, Arial" font-size="56" font-weight="700" fill="#1f2329">Smart</text>
+  <text x="350" y="75" font-family="Inter, system-ui, Arial" font-size="56" font-weight="800" fill="url(#grad)">BI</text>
+</svg>

@@ -263,7 +263,7 @@ function start_sqlbot() {
     echo
     if [[ $INSTALL_TYPE != "upgrade" ]];then
        echo -e "======================= 安装完成 =======================\n" 2>&1 | tee -a ${CURRENT_DIR}/install.log
-       echo -e "系统登录信息如下:\n\t访问地址: http://服务器IP:$SQLBOT_WEB_PORT\n\t用户名: admin\n\t初始密码: SQLBot@123456" 2>&1 | tee -a ${CURRENT_DIR}/install.log
+       echo -e "系统登录信息如下:\n\t访问地址: http://服务器IP:$SQLBOT_WEB_PORT\n\t用户名: admin\n\t初始密码: SmartBI@123456" 2>&1 | tee -a ${CURRENT_DIR}/install.log
     else
        echo -e "======================= 升级完成 =======================\n" 2>&1 | tee -a ${CURRENT_DIR}/install.log
     fi
