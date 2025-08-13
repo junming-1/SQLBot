@@ -1,7 +1,8 @@
 services:
   sqlbot:
-    image: dataease/sqlbot:v1.0.0
-    container_name: sqlbot
+    build: .
+    image: smartbi:latest
+    container_name: smartbi
     restart: always
     networks:
       - sqlbot-network
@@ -16,8 +17,8 @@ services:
       POSTGRES_USER: sqlbot
       POSTGRES_PASSWORD: sqlbot
       # Project basic settings
-      PROJECT_NAME: "SQLBot"
-      DEFAULT_PWD: "SQLBot@123456"
+      PROJECT_NAME: "SmartBI"
+      DEFAULT_PWD: "SmartBI@123456"
       # MCP settings
       SERVER_IMAGE_HOST: https://YOUR_SERVE_IP:MCP_PORT/images/
       # Auth & Security

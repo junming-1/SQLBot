@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="SmartBI Robot">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#5B8DEF"/>
-      <stop offset="100%" stop-color="#22C3AA"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#20c997"/>
+      <stop offset="100%" stop-color="#2f80ed"/>
     </linearGradient>
   </defs>
-  <rect x="8" y="16" width="48" height="34" rx="8" fill="url(#g)"/>
-  <circle cx="24" cy="32" r="5" fill="#fff"/>
-  <circle cx="40" cy="32" r="5" fill="#fff"/>
-  <circle cx="24" cy="32" r="2.2" fill="#2F3A4A"/>
-  <circle cx="40" cy="32" r="2.2" fill="#2F3A4A"/>
-  <rect x="26" y="41" width="12" height="3" rx="1.5" fill="#ffffff" opacity=".9"/>
-  <rect x="18" y="10" width="28" height="6" rx="3" fill="#2F3A4A"/>
-  <rect x="30" y="6" width="4" height="6" rx="2" fill="#2F3A4A"/>
-  <rect x="2" y="26" width="8" height="2" rx="1" fill="#9FB3C8"/>
-  <rect x="54" y="26" width="8" height="2" rx="1" fill="#9FB3C8"/>
+  <rect x="6" y="14" width="52" height="38" rx="10" fill="url(#bg)"/>
+  <circle cx="24" cy="32" r="7" fill="#ffffff"/>
+  <circle cx="40" cy="32" r="7" fill="#ffffff"/>
+  <circle cx="24" cy="32" r="3" fill="#1f2329"/>
+  <circle cx="40" cy="32" r="3" fill="#1f2329"/>
+  <rect x="26" y="44" width="12" height="3.5" rx="1.75" fill="#ffffff" opacity=".9"/>
+  <rect x="20" y="6" width="24" height="6" rx="3" fill="#1f2329"/>
+  <rect x="30" y="2" width="4" height="6" rx="2" fill="#1f2329"/>
+  <rect x="0" y="26" width="10" height="2.5" rx="1.25" fill="#a1b2c8"/>
+  <rect x="54" y="26" width="10" height="2.5" rx="1.25" fill="#a1b2c8"/>
 </svg>
